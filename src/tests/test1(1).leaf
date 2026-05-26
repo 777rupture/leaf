@@ -1,0 +1,64 @@
+// test1.leaf - full Leaf test
+
+// Variables + interpolation
+name = "Leaf"
+print("welcome to <name>")
+
+// Functions
+fun square(x) {
+    return x * x
+}
+
+fun greet(n) {
+    print("hello <n>!")
+}
+
+greet("world")
+
+// Arrays + for loop
+nums = [1, 2, 3, 4, 5]
+for n -> nums {
+    result = square(n)
+    if result > 10 {
+        print("big: <result>")
+    } else {
+        print("small: <result>")
+    }
+}
+
+// While + break
+count = 3
+while count > 0 {
+    print("countdown: <count>")
+    count = count - 1
+}
+
+// String methods
+msg = "  hello leaf  "
+print(msg.trim())
+print(msg.trim().upper())
+
+// Math module
+x = math.sqrt(144)
+print("sqrt 144 = <x>")
+
+// range()
+for i -> range(3) {
+    print(i)
+}
+
+// List methods
+items = [10, 20, 30]
+items.push(40)
+print(items.len())
+
+// fs module
+fs.write("out.txt", "leaf wrote this")
+content = fs.read("out.txt")
+print(content)
+
+// input (comment out if testing non-interactively)
+// name = input("your name: ")
+// print("hi <name>")
+
+print("done")

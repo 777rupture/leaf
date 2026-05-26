@@ -1,3 +1,7 @@
+## Author
+
+[777rupture](https://github.com/777rupture)
+
 # 🍃 Leaf
 
 A fast, minimal, dynamically-typed programming language built in modern C++.

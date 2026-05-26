@@ -201,8 +201,14 @@ static int cmdTokens(const std::string& path) {
 // ─── Entry point ─────────────────────────────────────────────────────────────
 
 int main(int argc, char* argv[]) {
+    // Force output to flush immediately on all platforms
+    std::ios::sync_with_stdio(true);
+    std::cout.flush();
+    setvbuf(stdout, nullptr, _IONBF, 0);
+
     if (argc < 2) {
         printHelp();
+        std::cout.flush();
         return 0;
     }
 
